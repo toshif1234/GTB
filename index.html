@@ -21,6 +21,16 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <style>
+      #bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 50%; 
+  min-height: 50%;
+}
+
+    </style>
 <!--
 
 TemplateMo 586 Scholar
@@ -31,7 +41,7 @@ https://templatemo.com/tm-586-scholar
   </head>
 
 <body>
-
+  
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -50,14 +60,17 @@ https://templatemo.com/tm-586-scholar
     <div class="container">
         <div class="row">
             <div class="col-12">
+              
                 <nav class="main-nav">
+          <!-- <img src="assets/images/web logo.png" style="max-width: 100px; margin-top: 0px;" alt="" srcset=""> -->
+
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
-                        <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: aliceblue;">GTB</h1>
+                        <h1><img src="assets/images/web logo.png" style="max-width: 140px; margin-top: 0px;" alt="" srcset=""></h1>
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Serach Start ***** -->
-                    <div class="search-input">
+                    <div class="search-input" style="margin-top: 1px;">
                       <form id="search" action="#">
                         <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
                         <i class="fa fa-search"></i>
@@ -65,7 +78,7 @@ https://templatemo.com/tm-586-scholar
                     </div>
                     <!-- ***** Serach Start ***** -->
                     <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
+                    <ul class="nav"  style="margin-top: 18px;">
                       <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                       <li class="scroll-to-section"><a href="#services">Services</a></li>
                       <li class="scroll-to-section"><a href="#courses">Courses</a></li>
@@ -88,7 +101,7 @@ https://templatemo.com/tm-586-scholar
       
     </canvas>
     <div class="main-banner" id="top">
-   
+        
       <!-- <h1 class="main-title">Connect <span class="thin">Three</span></h1> -->
   <div class="container">
     <div class="row">
@@ -99,14 +112,6 @@ https://templatemo.com/tm-586-scholar
               <span class="category">Our Courses</span>
               <h2 style="text-align: center;">heading 1</h2>
               <p>discription 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor non tempore laboriosam quis commodi officia necessitatibus nihil explicabo id repellendus magnam tempora mollitia, at odit esse quas voluptas doloremque minima.</p>
-              <div class="buttons">
-                <div class="main-button">
-                  <a href="#">Request Demo</a>
-                </div>
-                <div class="icon-button">
-                  <a href="#"><i class="fa fa-play"></i> What's Scholar?</a>
-                </div>
-              </div>
             </div>
           </div>
           <div class="item item-2">
@@ -114,14 +119,6 @@ https://templatemo.com/tm-586-scholar
               <span class="category">Best Result</span>
               <h2>heading 2</h2>
               <p>discription 2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor non tempore laboriosam quis commodi officia necessitatibus nihil explicabo id repellendus magnam tempora mollitia, at odit esse quas voluptas doloremque minima.</p>
-              <div class="buttons">
-                <div class="main-button">
-                  <a href="#">Request Demo</a>
-                </div>
-                <div class="icon-button">
-                  <a href="#"><i class="fa fa-play"></i> What's the best result?</a>
-                </div>
-              </div>
             </div>
           </div>
           <div class="item item-3">
@@ -129,14 +126,14 @@ https://templatemo.com/tm-586-scholar
               <span class="category">Online Learning</span>
               <h2>heading 3</h2>
               <p>discription 3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor non tempore laboriosam quis commodi officia necessitatibus nihil explicabo id repellendus magnam tempora mollitia, at odit esse quas voluptas doloremque minima.</p>
-             <div class="buttons">
+             <!-- <div class="buttons">
                 <div class="main-button">
                   <a href="#">Request Demo</a>
                 </div>
                 <div class="icon-button">
                   <a href="#"><i class="fa fa-play"></i> What's Online Course?</a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -147,10 +144,17 @@ https://templatemo.com/tm-586-scholar
   </div>
   
   </div>
-
+    <video  preload="true"  autoplay muted loop id="bgVideo">
+      <source src="assets/videos/Untitled video - Made with Clipchamp.mp4"  type="video/mp4" >
+  
+  </video>  
+ 
   <div class="services section" id="services">
+    
     <div class="container">
+      
       <div class="row">
+       
         <h1 style="text-align: center; margin-bottom: 90px;">Services</h1>
         <div class="col-lg-4 col-md-6">
           <div class="service-item">
@@ -734,7 +738,20 @@ https://templatemo.com/tm-586-scholar
   <script src='assets/js/EasePack.min.js'></script>
   <script src='assets/js/TweenLite.min.js'></script>
   <script  src="script.js"></script>
-  
+  <script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
 
   </body>
 </html>
