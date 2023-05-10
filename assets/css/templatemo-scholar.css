@@ -105,7 +105,7 @@ p {
 
 img {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* 
@@ -659,6 +659,82 @@ Header Style
   
 }
 
+.nav .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 28px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #12101d82;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.nav .dropdown ul li {
+  min-width: fit-content;
+}
+
+.nav .dropdown ul a {
+  padding: 5px 10px;
+  font-size: 15px;
+  text-transform: none;
+  font-weight: 600;
+  color: #eee;
+}
+
+.nav .dropdown ul a i {
+  font-size: 12px;
+}
+
+.nav .dropdown ul a:hover,
+.nav .dropdown ul .active:hover,
+.nav .dropdown ul li:hover>a {
+  color: #f9f1e9;
+}
+
+.nav .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.nav .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.nav .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+
+@media (min-width: 1280px) and (max-width: 1366px) {
+.nav .dropdown .dropdown ul {
+  left: -90%;
+}
+
+.nav .dropdown .dropdown:hover>ul {
+  left: -100%;
+}
+}
+
+@media (min-width: 1280px) {
+
+.mobile-nav-show,
+.mobile-nav-hide {
+  display: none;
+}
+}
+
 /* 
 ---------------------------------------------
 Banner Style
@@ -810,7 +886,8 @@ Banner Style
   /* background-position: right bottom; */
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 190px 0px 110px 0px;
+  /* padding: 290px 0px 110px 0px; */
+  min-height: fit-content;
 }
 
 

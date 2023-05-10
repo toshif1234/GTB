@@ -22,7 +22,115 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <style>
-
+       .mySlides {
+        margin-bottom: 50px;
+        display: none
+      }
+      img {
+        vertical-align: middle;
+      }
+      .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+      }
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      /* Caption text */
+      .text {
+        color: #ffffff;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #999999;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      .active,
+      .dot:hover {
+        background-color: #111111;
+      }
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 2.5s;
+        animation-name: fade;
+        animation-duration: 2.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+      #img{
+        align-items: center;
+        margin-top: 20%;
+        width: 70%;
+        border: solid rgb(0, 191, 255) 5px;
+        border-radius: solid 90px ;
+      }
 
     </style>
 <!--
@@ -74,7 +182,24 @@ https://templatemo.com/tm-586-scholar
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav"  style="margin-top: 18px;">
                       <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                      <li class="scroll-to-section"><a href="#services">Services</a></li>
+                      <li class="dropdown">
+                       <a >Services</a>  
+                        <ul>
+                          <li  class="dropdown"><a>Services</a>
+                            <ul>
+                              <li><a href="">Services</a></li>
+                              <li><a href="">Services</a></li>
+                              <li><a href="">Services</a></li>
+                              <li><a href="">Services</a></li>
+                            
+                            </ul>
+                          </li>
+                          <li><a href="">Services</a></li>
+                          <li><a href="">Services</a></li>
+                          <li><a href="">Services</a></li>
+                        
+                        </ul>
+                      </li>
                       <li class="scroll-to-section"><a href="#courses">Courses</a></li>
                       <li class="scroll-to-section"><a href="#team">Team</a></li>
                       <li class="scroll-to-section"><a href="#events">Events</a></li>
@@ -100,37 +225,49 @@ https://templatemo.com/tm-586-scholar
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="owl-carousel owl-banner">
-          <div class="item item-1">
             <div class="header-text">
-              <span class="category">Our Courses</span>
-              <h2 style="text-align: center;">heading 1</h2>
-              <p>discription 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor non tempore laboriosam quis commodi officia necessitatibus nihil explicabo id repellendus magnam tempora mollitia, at odit esse quas voluptas doloremque minima.</p>
-            </div>
-          </div>
-          <div class="item item-2">
-            <div class="header-text">
-              <span class="category">Best Result</span>
-              <h2>heading 2</h2>
-              <p>discription 2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor non tempore laboriosam quis commodi officia necessitatibus nihil explicabo id repellendus magnam tempora mollitia, at odit esse quas voluptas doloremque minima.</p>
-            </div>
-          </div>
-          <div class="item item-3">
-            <div class="header-text">
-              <span class="category">Online Learning</span>
-              <h2>heading 3</h2>
-              <p>discription 3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor non tempore laboriosam quis commodi officia necessitatibus nihil explicabo id repellendus magnam tempora mollitia, at odit esse quas voluptas doloremque minima.</p>
-             <!-- <div class="buttons">
-                <div class="main-button">
-                  <a href="#">Request Demo</a>
+              <div class="row">
+              <div class="col col-md-4 col-lg-4"></div>
+              <div class="col col-md-6 col-lg-6 col-12">
+                <div class="slideshow-container">
+                  <div class="mySlides ">
+                    <!-- <div class="numbertext">1 / 3</div> -->
+                    <img src="assets/images/programming-and-we-design.jpg"  id="img" >
+                    <!-- <div class="text">London, Ebgland</div> -->
+                    <h2 class="text-white">web Services</h2>
+                  </div>
+                  <div class="mySlides ">
+                    <!-- <div class="numbertext">2 / 3</div> -->
+                    <img src="assets/images/big-shopping-sale.jpg" id="img" >
+                    <!-- <div class="text">Sunset in Romania</div> -->
+                    <h2 class="text-white"> E-Comerce Services</h2>
+                  </div>
+                  <div class="mySlides ">
+                    <!-- <div class="numbertext">3 / 3</div> -->
+                    <img src="assets/images/mobile-application-development.jpg" id="img" >
+                    <!-- <div class="text">New York, USA</div> -->
+                    <h2 class="text-white">App Services</h2>
+                  </div>
+                  <div class="mySlides ">
+                    <!-- <div class="numbertext">2 / 3</div> -->
+                    <img src="assets/images/search-engine.jpg" id="img" >
+                    <!-- <div class="text">Sunset in Romania</div> -->
+                    <h2 class="text-white">SEO (Search Engine Optimization)</h2>
+                  </div>
                 </div>
-                <div class="icon-button">
-                  <a href="#"><i class="fa fa-play"></i> What's Online Course?</a>
+                <br>
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(0)"></span>
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
-              </div> -->
+              </div>
+              </div>
             </div>
           </div>
-        </div>
+          
+        
       </div>
     </div>
   </div>
@@ -141,16 +278,13 @@ https://templatemo.com/tm-586-scholar
     
  
   <div class="services section" id="services">
-    
     <div class="container">
-     
       <div class="row">
-        
         <h1 style="text-align: center; margin-bottom: 90px;">Services</h1>
         <div class="col-lg-4 col-md-6">
           <div class="service-item">
             <div class="icon">
-              <img src="assets/images/service-01.png" alt="online degrees">
+              <img src="assets/images/ser-1.png" alt="online degrees">
             </div>
             <div class="main-content">
               <h4>Online Degrees</h4>
@@ -729,18 +863,44 @@ https://templatemo.com/tm-586-scholar
   <script src='assets/js/TweenLite.min.js'></script>
   <script  src="script.js"></script>
   <script>
-var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
-
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}
+ let slideIndex = 0;
+      let timeoutId = null;
+      const slides = document.getElementsByClassName("mySlides");
+      const dots = document.getElementsByClassName("dot");
+      
+      showSlides();
+      function currentSlide(index) {
+           slideIndex = index;
+           showSlides();
+      }
+     function plusSlides(step) {
+        
+        if(step < 0) {
+            slideIndex -= 2;
+            
+            if(slideIndex < 0) {
+              slideIndex = slides.length - 1;
+            }
+        }
+        
+        showSlides();
+     }
+      function showSlides() {
+        for(let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          dots[i].classList.remove('active');
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add('active');
+         if(timeoutId) {
+            clearTimeout(timeoutId);
+         }
+        timeoutId = setTimeout(showSlides, 2000); // Change image every 5 seconds
+      }
 </script>
 
   </body>
