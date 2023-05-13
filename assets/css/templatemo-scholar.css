@@ -750,8 +750,8 @@ Banner Style
   z-index: 1;
 }
 #large-header {
-  /* background-image: url("https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg"); */
-  background-color: #12101d;
+  background-image: url("../images/Business-Automation-01.jpeg");
+  /* background-color: #12101d; */
   
 }
 .main-title {

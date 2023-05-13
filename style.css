@@ -67,3 +67,18 @@
     }
   }
   
+
+  .sticky_logo {
+    position: absolute;
+    display: none;
+    width: 30px;
+    text-align: center;
+    right: 30px;
+    bottom: 30px;
+    z-index: 11;
+    animation: action 1s infinite alternate;
+  }
+
+  .sticky_logo a{
+    color: blue;
+  }
