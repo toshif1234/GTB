@@ -357,7 +357,7 @@ https://templatemo.com/tm-586-scholar
               <h4>Social Media Management</h4>
               <p>At our company, we specialize in providing expert social media management services to help our clients grow their online presence and engage with their target audience . From developing content and strategies to managing social media accounts and advertising campaigns, our services cover all aspects of social media management. Contact us today to learn more about how we can help you succeed with social media.</p>
               <div class="main-button">
-                <a href="#">Read More</a>
+                <a href="socialmedia.html">Read More</a>
               </div>
             </div>
           </div>
@@ -888,6 +888,62 @@ https://templatemo.com/tm-586-scholar
     </div>
   </footer>
 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+            .scroll{
+                position: fixed;
+                 bottom:0 ;
+                 right:0; 
+                 border-radius: 90% !important;
+                 display: none;
+            }
+            
+
+        </style>
+    <a class="btn btn-success btn-lg m-4 scroll" href="https://wa.me/message/VA6CIOMG75AUA1" id="scroll-btn" > <i class="fab fa-whatsapp"></i></a>
+    <script>
+        var mybutton = document.getElementById("scroll-btn");
+
+        window.onscroll = function() {scrollFunction();
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                var element = document.getElementById("arrow");
+            }
+            // alert(window.innerHeight + window.scrollY + "::::" + document.body.offsetHeight);
+
+           
+        
+        
+        };
+        
+
+        
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function scrollWin() {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+
+                    window.scroll({
+                    top:0,
+                    behavior: 'smooth' 
+                });
+            }
+            else{
+                window.scroll({
+                    top:document.body.scrollHeight,
+                    behavior: 'smooth' 
+                });
+            }
+         
+        }
+    </script>
   <div class="sticky_logo">
     <a class="btn btn-light btn-social mr-2" href="https://wa.me/message/VA6CIOMG75AUA1"><i class="fab fa-whatsapp"></i></a>
   </div>
